@@ -10,12 +10,12 @@ public class Polynomial {
     public int[] exponents;
 
     public Polynomial() {;
-	    this.coefficients = new double[0];
+	this.coefficients = new double[0];
         this.exponents = new int[0]; 
     }
 
     public Polynomial(double[] coefficients, int[] exponents) {;
-	    if (coefficients.length != exponents.length) {
+	if (coefficients.length != exponents.length) {
             System.out.println("Coefficients and exponents arrays must have the same length");
         }
         this.coefficients = new double[coefficients.length];
@@ -99,7 +99,7 @@ public class Polynomial {
 
         for (int i = 0; i < added.coefficients.length; i++) {
             int target = findIndex(newExponents,added.exponents[i]);
-        	if (target != -1){
+            if (target != -1){
                 newCoefficients[target] += added.coefficients[i];
             }else{
                 newCoefficients[index] += added.coefficients[i];
